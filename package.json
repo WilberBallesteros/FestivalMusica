@@ -1,0 +1,24 @@
+{
+  "name": "festivalmusica",
+  "version": "1.0.0",
+  "description": "Proyecto con Gulp, SASS y HTML",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/WilberBallesteros/FestivalMusica.git"
+  },
+  "keywords": [
+    "SASS",
+    "GULP",
+    "HTML"
+  ],
+  "author": "Wilber Ballesteros",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/WilberBallesteros/FestivalMusica/issues"
+  },
+  "homepage": "https://github.com/WilberBallesteros/FestivalMusica#readme"
+}
