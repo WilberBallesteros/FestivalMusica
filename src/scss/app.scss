@@ -1,6 +1,8 @@
-$rojo: blue;
+// formas de llamar de otro archivo
 
+//forma anterior
+// @import 'base/variables';
+// @import 'contenido/contenido';
 
-body {
-    background-color: $rojo;
-}
+//forma nueva
+@use 'base'; //use instancias locales
