@@ -25,6 +25,7 @@
   "homepage": "https://github.com/WilberBallesteros/FestivalMusica#readme",
   "devDependencies": {
     "gulp": "^4.0.2",
+    "gulp-plumber": "^1.2.1",
     "gulp-sass": "^5.1.0",
     "sass": "^1.66.1"
   }

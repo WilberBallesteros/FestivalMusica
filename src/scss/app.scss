@@ -5,4 +5,5 @@
 // @import 'contenido/contenido';
 
 //forma nueva
-@use 'base'; //use instancias locales
+@use 'base'; //use instancias locales, carpeta base
+@use 'layout'; //carpeta layout

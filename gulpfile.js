@@ -3,10 +3,12 @@
 
 const { src, dest, watch } = require("gulp"); //el gulp q instalamos 4.0.2, src identifica el archivo, dest lo guarda
 const sass = require("gulp-sass")(require("sass"));
+const plumber = require("gulp-plumber");
 
 function css(done) {
 
     src("src/scss/**/*.scss") //identificar el archivo de SASS todas las carpetas y archiovs sass al guardar
+        .pipe( plumber() ) //muestra errores de codigo sin detener la terminal
         .pipe( sass() ) //compilarlo
         .pipe( dest("build/css") ); //almacenarla en el disco duro
 

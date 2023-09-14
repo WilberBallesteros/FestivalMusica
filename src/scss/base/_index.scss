@@ -1,3 +1,9 @@
 //llamamos todos los otros archivos contenidos en esta carpeta
+//el orden es importante
+
 @forward 'variables'; //apunta a el archivo de variables.scss
+@forward 'mixins';
+@forward 'normalize';
+@forward 'globales';
+
 
