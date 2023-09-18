@@ -59,18 +59,25 @@ function versionAvif(done) {
     done();
 }
 
+function javaScript(done) {
+    src('src/js/**/*.js')
+        .pipe(dest('build/js'));
+    done();
+}
+
 function dev(done) {
 
     watch("src/scss/**/*.scss", css);
-
+    watch("src/js/**/*.js", javaScript); //javaScript es la funcion q se manda a llamar
     done();
 }
 
 exports.css = css; //mandamos llamar a la funcion css
+exports.js = javaScript;
 exports.imagenes = imagenes;
 exports.versionWebp = versionWebp;
 exports.versionAvif = versionAvif;
-exports.dev = parallel(imagenes, versionWebp, versionAvif, dev); //ejecuta la tarea versionWebp y despues la de dev
+exports.dev = parallel(imagenes, versionWebp, versionAvif, javaScript, dev); //ejecuta la tarea versionWebp y despues la de dev
 
 //npm run dev
 //npx gulp dev

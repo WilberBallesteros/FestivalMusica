@@ -10,6 +10,10 @@ html {
 body {
     font-family: v.$fuente_principal;
     font-size: 1.6rem;
+
+    &.fijar-body {
+        overflow: hidden; //no pueda dar scroll cuando muestre la imagen grande de la galeria
+    }
 }
 p {
     font-size: 2rem;
