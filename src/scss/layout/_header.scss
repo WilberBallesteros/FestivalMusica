@@ -4,6 +4,18 @@
 .header {
     background-color: v.$verde;
 
+    //esta clase es cuando le damos scroll para ver el header en las otras secciones
+    @include m.tablet {
+        &.fijo {
+            left: 0;
+            top: 0;
+            position: fixed; //posicion fija
+            width: 100%;
+            box-shadow: .1rem .2rem .3rem #333;
+        }
+    }
+   
+
     h1 {
         color: v.$blanco;
         text-align: center;

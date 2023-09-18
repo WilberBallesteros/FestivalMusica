@@ -3,9 +3,45 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 function iniciarApp() {
+    navegacionFija();
     crearGaleria();
+    scrollNav();
 }
 
+function navegacionFija() {
+    const barra = document.querySelector('.header');
+    const sobreFestival = document.querySelector('.sobre-festival');
+    const body = document.querySelector('body');
+
+    window.addEventListener('scroll', function() {
+        //console.log(sobreFestival.getBoundingClientRect());
+
+        if (sobreFestival.getBoundingClientRect().top < 0) {
+            //console.log('ya pasamos el elemento');
+            barra.classList.add('fijo');
+            body.classList.add('body-scroll');
+        }   else {
+            //console.log('aun nonas');
+            barra.classList.remove('fijo');
+            body.classList.remove('body-scroll');
+        }
+    });
+}
+
+function scrollNav() {
+
+    const enlaces = document.querySelectorAll('.navegacion-principal a');
+    enlaces.forEach( enlace => {
+        enlace.addEventListener('click', function(e) {
+
+            e.preventDefault(); //prevenir la accion x defecto q va al instante al enlace
+
+            const seccionScroll = e.target.attributes.href.value; //target es a lo q le he dado click
+            const seccion = document.querySelector(seccionScroll);
+            seccion.scrollIntoView({ behavior: "smooth" }); //ir al enlace despacio y chidory
+        });
+    });
+}
 
 function crearGaleria() {
     const galeria = document.querySelector('.galeria-imagenes');

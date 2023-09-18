@@ -10,9 +10,14 @@ html {
 body {
     font-family: v.$fuente_principal;
     font-size: 1.6rem;
-
+    
+    //paraq no se vea el salto al dar scroll
     &.fijar-body {
         overflow: hidden; //no pueda dar scroll cuando muestre la imagen grande de la galeria
+    }
+    //para quitar o poner esta clase desde js al dar scroll
+    &.body-scroll {
+        padding-top: 8.6rem; //tiene q medir igual q la barra
     }
 }
 p {
