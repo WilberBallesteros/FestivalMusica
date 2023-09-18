@@ -7,8 +7,8 @@
     //esta clase es cuando le damos scroll para ver el header en las otras secciones
     @include m.tablet {
         &.fijo {
-            left: 0;
-            top: 0;
+            left: 0; //paraq no se vea el salto al dar scroll
+            top: 0; //paraq no se vea el salto al dar scroll
             position: fixed; //posicion fija
             width: 100%;
             box-shadow: .1rem .2rem .3rem #333;
